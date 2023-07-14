@@ -16,10 +16,13 @@
         stack = document.getElementById('stack');
         layers = document.location.href.split('?')[1].split('=')[1].split(',');
         for (i=0;i<layers.length;i++) {
-            img = document.createElement('img');
-            img.setAttribute('src','layers/'+layers[i]+'.png');
-            img.setAttribute('class','layer');
-            stack.appendChild(img);
+            if (layers[i] != '0000') {
+                img = document.createElement('img');
+                img.setAttribute('src','layers/'+layers[i]+'.png');
+                img.setAttribute('class','layer');
+                img.setAttribute('style','z-index:'+i);
+                stack.appendChild(img);
+            }
         }
     </script>
 </body>
