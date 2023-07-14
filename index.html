@@ -14,7 +14,7 @@
     </div>
     <script>
         stack = document.getElementById('stack');
-        layers = document.location.href.split('?')[1].split('=')[1].match(/.{1,2}/g);
+        layers = document.location.href.split('?')[1].split('=')[1].split(',');
         for (i=0;i<layers.length;i++) {
             img = document.createElement('img');
             img.setAttribute('src','layers/'+layers[i]+'.png');
