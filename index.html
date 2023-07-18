@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Layer Apes </title>
+    <title>Layer Apes</title>
     <style>
-        .fur { position: absolute; }
-        .clothes { position: absolute; z-index: 1; }
-        .earring { position: absolute; z-index: 2; }
-        .eyes { position: absolute; z-index: 3; }
-        .mouth { position: absolute; z-index: 4; }
-        .hat { position: absolute; z-index: 5; }
+        .layer {position: absolute;} //z-index:0
     </style>
 </head>
 
 <body>
-        <img class="fur" src="Wearables/fur_black.png">
-        <img class="clothes" src="Wearables/clothes_admirals-coat.png" >
-        <img class="earring" src="Wearables/earring_cross.png" >
-        <img class="eyes" src="Wearables/eyes_dwi.png" >
-        <img class="mouth" src="Wearables/mouth_bored-bubblegum.png" >
-        <img class="hat" src="Wearables/hat_trippy-captains-hat.png" >
+    <div id="stack">
+    </div>
+    <script>
+        stack = document.getElementById('stack');
+        layers = document.location.href.split('?')[1].split('=')[1].split(',');
+        for (i=0;i<layers.length;i++) {
+            if (layers[i] != '0000') {
+                img = document.createElement('img');
+                img.setAttribute('src','layers/'+layers[i]+'.png');
+                img.setAttribute('class','layer');
+                img.setAttribute('style','z-index:'+i);
+                stack.appendChild(img);
+            }
+        }
+    </script>
 </body>
 </html>
