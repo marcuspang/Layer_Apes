@@ -9,7 +9,7 @@
 				src={'/layers/' + layer + '.png'}
 				class="layer"
 				style={'z-index: ' + index}
-				alt={data.props.layers}
+				alt={'Layer ' + layer}
 			/>
 		{/each}
 	{:else}
