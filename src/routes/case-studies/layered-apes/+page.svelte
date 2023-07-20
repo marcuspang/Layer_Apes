@@ -1,21 +1,5 @@
 <script lang="js">
 	export let data;
-	// if (document) {
-	// 	const urlParams = document.location.href.split('?');
-
-	// 	if (urlParams?.length > 0) {
-	// 		const layers = urlParams[1].split('=')[1].split(',');
-	// 		console.log({ layers });
-	// 		for (let i = 0; i < layers.length; i++) {
-	// 			if (layers[i] != '0000') {
-	// 				const img = document.createElement('img');
-	// 				img.setAttribute('src', '/layers/' + layers[i] + '.png');
-	// 				img.setAttribute('class', 'layer');
-	// 				img.setAttribute('style', 'z-index:' + i);
-	// 			}
-	// 		}
-	// 	}
-	// }
 </script>
 
 <div>
